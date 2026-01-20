@@ -13,7 +13,7 @@ int mySqrt(int x){
 }
 
 int main(int argc, char *argv[]){
-    int s = mySqrt(57);
+    printf("Welcome to mySqrt()!");
     printf("The integer square root is: %d", s);
     return 0;
 }
