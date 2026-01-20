@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int mySqrt(int x){
     if(x==0 || x==1) return x;
@@ -13,7 +14,14 @@ int mySqrt(int x){
 }
 
 int main(int argc, char *argv[]){
-    printf("Welcome to mySqrt. I am looking forward to calculating some squares!!");
-    printf("The integer square root is: %d", s);
+    
+    printf("\nWelcome to mySqrt()!\n");
+    int val;
+    printf("Enter an integer value, enter a non-integer char to quit: ");
+    while(scanf("%d", &val)==1){
+        int ans = mySqrt(val);
+        printf("\nThe integer square root is: %d\n", ans);
+        printf("Enter another integer: ");
+    }
     return 0;
 }
